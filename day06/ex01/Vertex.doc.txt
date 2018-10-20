@@ -1,0 +1,25 @@
+
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles 3D vertexes (points) in space.
+
+Vertex is represented by 5 characteristics:
+
+- 'x', 'y', 'z' coordinates [mandatory, no default]
+- 'w' homogenous parameter [optional, default 1.0]
+- 'color' (from the class Color) [optional, default white 0xFFFFFF]
+
+
+An instance is constructed from:
+
+1) 3 mandatory values 'x' 'y' 'z':
+
+	-> new Vertex( array( 'x' => 1.0, 'y' => 0.0, 'z' => 0.0 ) );
+
+2) 0-2 optional parameters 'w' and 'color':
+
+	-> new Vertex( array( [x,y,z] , 'w' => 2.0, 'color' => #instance_Color ) );
+
+
+All 5 attributes (properties) are private, you might
+need __get and __set to access them.
+---------------------------------------------------------------------- Vertex ->

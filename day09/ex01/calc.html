@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+#calc {
+
+}
+
+</style>
+    <head>
+        <title>calc</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <input type="text" id="field_1">
+          <select id="sign">
+            <option value="+"> + </option>
+            <option value="-"> - </option>
+            <option value="*"> * </option>
+            <option value="/"> / </option>
+            <option value="%"> % </option>
+          </select>
+         <input type="text" id="field_2">
+         <input type="submit" id="button" onclick="my_functions()" value="Try me!">
+
+
+        <script type="text/javascript">
+            var a;
+            var b;
+            var result;
+            var operator;
+            var alert;
+            var field_1 = document.getElementById('field_1');
+            var field_2 = document.getElementById('field_2');
+            var sign = document.getElementById('sign');
+            var button = document.getElementById('button');
+            function my_functions()
+            {
+                calculate();
+                interval();
+            }
+            function calculate()
+            {
+               a = parseInt(field_1.value);
+               b = parseInt(field_2.value);
+               operator = sign.value;
+               if (a < 0 || b < 0 || !Number.isInteger(a) || !Number.isInteger(b))
+               {
+                // console.log("Error :(");
+                alert("Error :(");
+               }
+               else
+               {
+                   if (operator == "+")
+                   {
+                    result = a + b;
+                    console.log(result);
+                    alert(result);
+                   }
+                   else if (operator == '-')
+                   {
+                    result = a - b;
+                    console.log(result);
+                    alert(result);
+                   }
+                   else if (operator == '*')
+                   {
+                    result = a * b;
+                    console.log(result);
+                    alert(result);
+                   }
+                   else if (operator == '/')
+                   {
+                    if (b == 0)
+                    {
+                        console.log("It’s over 9000!");
+                        alert("It’s over 9000!");
+                    }
+                    else
+                    {
+                        result = a / b;
+                        console.log(result);
+                        alert(result);
+                    }
+                   }
+                   else if (operator == '%')
+                   {
+                    if (b == 0)
+                    {
+                        console.log("It’s over 9000!");
+                        alert("It’s over 9000!");
+                    }
+                    else
+                    {
+                        result = a % b;
+                        console.log(result);
+                        alert(result);
+                    }
+                   }
+               }
+
+            }
+            function use_me()
+            {
+                alert("Please, use me...");
+            }
+            function interval()
+            {
+                setInterval(use_me, 30000);
+            }
+        </script>
+    </body>
+</html>

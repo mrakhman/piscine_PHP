@@ -1,0 +1,160 @@
+html{
+        font-family: sans-serif;
+        background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/squared_metal.png");
+    }
+body{
+
+}
+
+#menu{
+    width: 100%; 
+    margin: 3%;
+    text-align: center;
+    font-size: 40px;
+}
+
+.column {
+    width: 50%;
+    margin-left: 45%;
+    margin-bottom: 2%;
+
+}
+
+.table{
+    width: 100%;
+}
+
+.row{
+    width: 100%;
+}
+
+.cell{
+    margin-top: 1%;
+    width: 3.99%;
+    height: 3.99%;
+    border: 1px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: 0.09%;
+    display: inline-block;
+}
+
+.empty_cell{
+    margin-top: 1%;
+    width: 3.99%;
+    height: 3.99%;
+    border: 1px;
+    box-sizing: border-box;
+    border-radius: 4px; 
+    margin: 0.09%; 
+    display: inline-block;
+}
+
+.name{
+    font-size: 18px;
+    padding: 7%;
+    color: white;
+    font-weight: bold;
+    text-align: center; 
+}
+
+.number{
+    text-align: left;
+    font-size: 15px;
+    padding: 1px;
+}
+
+.mass{
+    text-align: right;
+    font-size: 12px;
+    padding: 1px;
+}
+
+.group_alkali_metal{background-color: #f65558;}
+
+.group_alkaline_earth_metal{background-color: #f93;}
+
+.group_lanthanides{background-color: #9fd8ca;}
+
+.group_actinide{background-color: #52b6bd;}
+
+.group_transition_metal{background-color: #99afcb;}
+
+.group_post_transition_metal{background-color: #6b90ca;}
+
+.group_metalloid{background-color: #396;}
+
+.group_polyatomic_nonmetal{background-color: #8cc63f;}
+
+.group_halogen{background-color: #ffce00;}
+
+.group_noble_gas{background-color: #fa9d99;}
+
+
+@media screen and (min-width: 1700px){
+    .number{padding: 2px;}
+    .mass{padding: 2px;}
+}
+
+@media screen and (max-width: 1700px){
+    .name{font-size: 15px;}
+    .number{font-size: 11px;}
+    .mass{font-size: 10px;}
+}
+
+@media screen and (max-width: 1100px){
+    .name{font-size: 13px;}
+    .number{font-size: 9px;}
+    .mass{font-size: 8px;}
+    .name{padding: 3%;}
+}
+
+@media screen and (max-width: 964px){
+    .name{font-size: 12px;}
+    .number{font-size: 8px;}
+    .mass{font-size: 7px;}
+    .name{padding: 2%;}
+}
+
+@media screen and (max-width: 600px){
+    .name{font-size: 9px;}
+    .number{font-size: 6px;}
+    .mass{font-size: 5px;}
+    .name{padding: 1%;}
+}
+
+@media screen and (max-width: 500px){
+    .name{font-size: 7px;}
+    .number{font-size: 4px;}
+    .mass{font-size: 3px;}
+    .name{padding: 0%;}
+}
+
+@media screen and (max-width: 400px){
+    .cell{
+    margin-top: 0.1%;
+    width: 4%;
+    height: 4%;
+    border: 1px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: 0.009%;
+    display: inline-block;
+}
+
+    .empty_cell{
+        margin-top: 0.1%;
+        width: 4%;
+        height: 4%;
+        border: 1px;
+        box-sizing: border-box;
+        border-radius: 2px; 
+        margin: 0.009%; 
+        display: inline-block;
+}
+}
+
+@media screen and (max-width: 1000px){
+
+    #menu{font-size: 24px;}
+}

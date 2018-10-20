@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+div li {
+  display: block;
+  border: 1px solid white;
+  border-radius: 5px; 
+  width: 400px;
+  margin: 0px auto 0;
+  cursor: pointer;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+}
+
+#button {
+  width: 9%;
+  cursor: pointer;
+  border: 0.1px solid white;
+  border-radius: 3px;
+  background-color: #0FC57C;
+  padding: 13px;
+  margin: 2%;
+
+}
+
+.button_text{
+    font-size: 15px;
+    font-color: white;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px){
+    #button{font-size: 10px;}
+}
+
+</style>
+    <head>
+        <title>To do</title>
+        <meta charset="UTF-8">
+        <script src="todo.js"></script>
+    </head>
+    <body>
+      <button class="button_text" id="button" value="New" onclick="add_elem()"> New </button>
+        <div id="ft_list" value="ft_list"></div>
+        
+    </body>
+</html>

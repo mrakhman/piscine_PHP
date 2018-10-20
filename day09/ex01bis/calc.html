@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+#calc {
+
+}
+
+</style>
+    <head>
+        <title>calc</title>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                <script>
+          $(document).ready(function() {
+            interval();
+            var input = $('.field')
+            calculate = function()
+            {
+              flag = 1;
+              for (var i = input.length - 1; i >= 0; i--) {
+                if ($(input[i]).val() < 0 || !$.isNumeric($(input[i]).val()))
+                {
+                  // console.log("Error :(");
+                  alert("Error :(");
+                  flag = 0;
+                  break;
+                }
+              }
+
+              a = parseInt($(input[0]).val());
+              b = parseInt($(input[1]).val());
+              if (flag)
+               {
+                operator = $('#sign').val();
+                   if (operator == "+")
+                   {
+                    result = a + b;
+                    console.log(result);
+                    alert(result);
+                   }
+                   else if (operator == '-')
+                   {
+                    result = a - b;
+                    console.log(result);
+                    alert(result);
+                   }
+                   else if (operator == '*')
+                   {
+                    result = a * b;
+                    console.log(result);
+                    alert(result);
+                   }
+                   else if (operator == '/')
+                   {
+                    if (b == 0)
+                    {
+                        console.log("It’s over 9000!");
+                        alert("It’s over 9000!");
+                    }
+                    else
+                    {
+                        result = a / b;
+                        console.log(result);
+                        alert(result);
+                    }
+                   }
+                   else if (operator == '%')
+                   {
+                    if (b == 0)
+                    {
+                        console.log("It’s over 9000!");
+                        alert("It’s over 9000!");
+                    }
+                    else
+                    {
+                        result = a % b;
+                        console.log(result);
+                        alert(result);
+                    }
+                  }
+                }
+            };
+            function use_me()
+            {
+                alert("Please, use me...");
+            }
+            function interval()
+            {
+                setInterval(use_me, 30000);
+            }
+            $('#button').click(function(){
+              calculate();
+            });
+          });
+        </script>
+    </head>
+    <body>
+        <input type="text" class="field" id="1">
+          <select id="sign">
+            <option value="+"> + </option>
+            <option value="-"> - </option>
+            <option value="*"> * </option>
+            <option value="/"> / </option>
+            <option value="%"> % </option>
+          </select>
+         <input type="text" class="field" id="2">
+         <input type="submit" id="button" value="Try me!">
+
+    </body>
+</html>
